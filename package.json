@@ -1,6 +1,6 @@
 {
   "name": "vinkius-connect-monorepo",
-  "version": "0.2.0",
+  "version": "0.1.0",
   "private": true,
   "description": "Rush monorepo hosting the Vinkius Connect AI SDK for Rush-based workspaces.",
   "license": "Apache-2.0",

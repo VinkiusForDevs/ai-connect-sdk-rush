@@ -1,0 +1,27 @@
+name: CI
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: "https://registry.npmjs.org"
+      - name: Install Rush
+        run: npm install -g @microsoft/rush@5.181.0
+      - name: Rush Install
+        run: rush install --bypass-policy
+      - name: Rush Build
+        run: rush build
+      - name: Rush Test
+        run: rush test
+      - name: Rush Lint
+        run: rush lint

@@ -1,0 +1,6 @@
+node_modules/
+dist/
+common/temp/
+**/.rush/
+*.log
+.DS_Store

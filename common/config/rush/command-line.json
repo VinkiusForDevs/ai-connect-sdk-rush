@@ -1,0 +1,26 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/command-line.schema.json",
+  "commands": [
+    {
+      "commandKind": "bulk",
+      "name": "test",
+      "summary": "Run unit tests for all projects",
+      "description": "Invokes the \"test\" script in each project that defines one.",
+      "enableParallelism": true,
+      "safeForSimultaneousRushProcesses": false,
+      "ignoreDependencyOrder": true,
+      "ignoreMissingScript": true
+    },
+    {
+      "commandKind": "bulk",
+      "name": "lint",
+      "summary": "Lint all projects",
+      "description": "Invokes the \"lint\" script in each project that defines one.",
+      "enableParallelism": true,
+      "safeForSimultaneousRushProcesses": false,
+      "ignoreDependencyOrder": true,
+      "ignoreMissingScript": true
+    }
+  ],
+  "parameters": []
+}
